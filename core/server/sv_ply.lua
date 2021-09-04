@@ -14,6 +14,6 @@ end)
 
 RPC.register("np-wheelfitment_sv:saveWheelfitment", function(pSource, pVin, pData)
     if pVin == nil or pVin == 0 or pVin == "" then return end
-    SQL.execute("UPDATE _vehicles SET wheels = ? WHERE vin = ?", pData, pVin)
+    SQL.execute("UPDATE _vehicle SET wheels = ? WHERE vin = ?", pData, pVin)
     return true
 end)
